@@ -1,3 +1,18 @@
+.main.row {
+	padding-top: 30px;
+	text-align: center;
+}
+
 .panel.white {
 	background-color: white;
+}
+
+.button.timer {
+    padding-top: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    font-size: 2rem;
+    color: black;
+    font-family: monospace;
 }
