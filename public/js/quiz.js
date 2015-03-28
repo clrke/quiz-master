@@ -11,21 +11,18 @@ angular.module('QuizApp', [])
 
 	Question.type = function () {
 		Question.iteration++;
-
-		// todo: stop iteration
 	}
-	Question.typer = $interval(Question.type, 100);
+	Question.typer = $interval(Question.type, 100, Question.value.length);
 
 	Question.time = 30;
 	Question.timeMinus = function () {
 		Question.time--;
-
-		// todo: stop iteration
 	}
 	Question.startTimer = function () {
 		Question.time = 30;
 		if( ! Question.timer)
-			Question.timer = $interval(Question.timeMinus, 1000);
+			Question.timer = $interval(Question.timeMinus,
+				1000, Question.time);
 	}
 
 	Question.getValue = function () {
