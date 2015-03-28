@@ -1,0 +1,20 @@
+<html ng-app="QuizApp">
+	<head>
+		<title>Quiz Master</title>
+		<link rel="stylesheet" type="text/css"
+			href="foundation/css/foundation.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="public/js/quiz.js"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="panel white"
+				ng-controller="QuestionController as Question">
+				<h1>
+					{{ Question.getValue() }}
+				</h1>
+			</div>
+		</div>
+	</body>
+</html>
