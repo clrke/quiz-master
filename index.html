@@ -19,7 +19,7 @@
 					{{ line }}
 				</h1>
 				<h1>
-					<button class="button round timer animated tada"
+					<div class="button round timer animated tada"
 						ng-hide="Question.iteration < Question.value.length"
 						ng-class="{
 							success: Question.time > 20,
@@ -37,7 +37,7 @@
 							}"
 						ng-click="Question.startTimer()">
 							{{ Question.getFormattedTime() }}
-					</button>
+					</div>
 				</h1>
 			</div>
 		</div>
