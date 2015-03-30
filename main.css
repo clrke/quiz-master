@@ -8,11 +8,11 @@
 }
 
 .button.timer {
-    padding-top: 4rem;
-    padding-right: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 4rem;
-    font-size: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    font-size: 5rem;
     color: black;
     font-family: monospace;
 }
