@@ -19,3 +19,7 @@
     font-size: 5rem;
     font-family: monospace;
 }
+
+body {
+    background-color: black;
+}
