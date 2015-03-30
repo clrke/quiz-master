@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css"
 			href="foundation/css/foundation.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
 		<script type="text/javascript" src="angular.js"></script>
 		<script type="text/javascript" src="public/js/quiz.js"></script>
 	</head>
@@ -18,12 +19,16 @@
 					{{ line }}
 				</h1>
 				<h1>
-					<button class="button round timer"
+					<button class="button round timer animated tada"
+						ng-hide="Question.iteration < Question.value.length"
 						ng-class="{
 							success: Question.time > 20,
 							warning: Question.time > 10
 								&& Question.time <= 20,
-							alert: Question.time <= 10}"
+							alert: Question.time <= 10,
+							infinite: Question.time <= 10
+								&& Question.time > 0
+							}"
 						ng-click="Question.startTimer()">
 							{{ Question.getFormattedTime() }}
 					</button>
