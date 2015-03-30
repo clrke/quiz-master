@@ -1,0 +1,15 @@
+{
+	"title": "OWNAGE Quiz Contest",
+	"questions": {
+		"easy": [
+			{
+				"question":
+					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"answer": {
+					"answer": "Buriza do Kyanon",
+					"type": "img"
+				}
+			}
+		]
+	}
+}
