@@ -26,10 +26,12 @@
 							warning: Question.time > 10
 								&& Question.time <= 20,
 							alert: Question.time <= 10,
-							tada: Question.time == 30 ||
+							tada: ( ! Question.timer &&
+								Question.time == 30) ||
 								(Question.time <= 10
 								&& Question.time > 0),
-							pulse: (Question.time <= 30
+							pulse: Question.timer &&
+								(Question.time <= 30
 								&& Question.time > 10),
 							infinite: Question.time < 30
 								&& Question.time > 0,
