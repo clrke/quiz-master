@@ -36,6 +36,6 @@ angular.module('QuizApp', [])
 	}
 
 	Question.getFormattedTime = function () {
-		return ("%2d", Question.time);
+		return (Question.time < 10? '0':'')+Question.time;
 	}
 }]);
