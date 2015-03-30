@@ -14,8 +14,8 @@
 			</div>
 			<div class="panel white"
 				ng-controller="QuestionController as Question">
-				<h1>
-					{{ Question.getValue() }}
+				<h1 ng-repeat="line in Question.getValue() track by $index">
+					{{ line }}
 				</h1>
 				<h1>
 					<button class="button round timer"

@@ -6,7 +6,11 @@ angular.module('QuizApp', [])
 .controller('QuestionController', ['$http', '$interval',
 		function($http, $interval){
 	Question = this;
-	Question.value = "Anong buong pangalan ng Buriza?";
+	Question.value = "Anong buong pangalan ng Buriza?\n"+
+						"a. Shadow blade\n"+
+						"b. Lothar's Edge\n"+
+						"c. Buriza Mae Show\n"+
+						"d. Buriza de Kyanon";
 	Question.iteration = 0;
 
 	Question.type = function () {
@@ -26,7 +30,9 @@ angular.module('QuizApp', [])
 	}
 
 	Question.getValue = function () {
-		return Question.value.substring(0, Question.iteration);
+		value = Question.value.substring(0, Question.iteration);
+		return value.split('\n');
+
 	}
 
 	Question.getFormattedTime = function () {
