@@ -23,10 +23,11 @@ angular.module('QuizApp', [])
 		Question.time--;
 	}
 	Question.startTimer = function () {
-		Question.time = 30;
-		if( ! Question.timer)
+		if( ! Question.timer) {
+			Question.time = 30;
 			Question.timer = $interval(Question.timeMinus,
 				1000, Question.time);
+		}
 	}
 
 	Question.getValue = function () {
