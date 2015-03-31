@@ -39,6 +39,12 @@ http.createServer(function (request, response) {
 		case '/description.json':
 			setResponse('text/json', 'description.json');
 			break;
+		case '/tick.mp3':
+			setResponse('', 'tick.mp3');
+			break;
+		case '/alarm.mp3':
+			setResponse('', 'alarm.mp3');
+			break;
 		default:
 			response.writeHead(404, {'Content-Type': 'text/text'});
 			response.end('404 page not found');
