@@ -3,10 +3,6 @@
 	text-align: center;
 }
 
-.height-75 {
-    height: 75%
-}
-
 .panel.white {
 	background-color: white;
 }
@@ -22,4 +18,9 @@
 
 body {
     background-color: black;
+}
+
+.banner {
+    height: 500px;
+    background-image: url('banner.jpg');
 }

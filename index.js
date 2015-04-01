@@ -45,6 +45,9 @@ http.createServer(function (request, response) {
 		case '/alarm.mp3':
 			setResponse('', 'alarm.mp3');
 			break;
+		case '/banner.jpg':
+			setResponse('', 'img/banner.jpg');
+			break;
 		default:
 			response.writeHead(404, {'Content-Type': 'text/text'});
 			response.end('404 page not found');

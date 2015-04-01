@@ -13,45 +13,53 @@
 			<div class="panel callout">
 				<h1> OWNAGE Quiz Contest </h1>
 			</div>
-			<div class="panel white height-75"
+			<div class="panel white container"
 				ng-controller="QuestionController as Question">
-				<h1 ng-repeat="line in Question.getValue() track by $index">
-					{{ line }}
-				</h1>
-				<h1>
-					<div class="button round timer animated tada"
-						ng-hide="Question.iteration < Question.value.length"
-						ng-class="{
-							success: Question.time > 20,
-							warning: Question.time > 10
-								&& Question.time <= 20,
-							alert: Question.time <= 10,
-							tada: ( ! Question.timer &&
-								Question.time == 30) ||
-								(Question.time <= 10
-								&& Question.time > 0),
-							pulse: Question.timer &&
-								(Question.time <= 30
-								&& Question.time > 10),
-							infinite: Question.time < 30
-								&& Question.time > 0,
-							rubberband: Question.time == 0
-							}"
-						ng-click="Question.startTimer()">
-							{{ Question.getFormattedTime() }}
+				<div class="row">
+					<div class="column small-2">
+						<div class="banner">
+						</div>
 					</div>
-				</h1>
-				<div ng-if="Question.timer && Question.time > 0">
-					<audio loop autoplay>
-						<source src="tick.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div ng-if="Question.time == 0">
-					<audio autoplay>
-						<source src="alarm.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
+					<div class="column small-10">
+						<h1 ng-repeat="line in Question.getValue() track by $index">
+							{{ line }}
+						</h1>
+						<h1>
+							<div class="button round timer animated tada"
+								ng-hide="Question.iteration < Question.value.length"
+								ng-class="{
+									success: Question.time > 20,
+									warning: Question.time > 10
+										&& Question.time <= 20,
+									alert: Question.time <= 10,
+									tada: ( ! Question.timer &&
+										Question.time == 30) ||
+										(Question.time <= 10
+										&& Question.time > 0),
+									infinite: Question.time < 30
+										&& Question.time > 0,
+									pulse: Question.timer &&
+										(Question.time <= 30
+										&& Question.time > 10),
+									rubberband: Question.time == 0
+									}"
+								ng-click="Question.startTimer()">
+									{{ Question.getFormattedTime() }}
+							</div>
+						</h1>
+						<div ng-if="Question.timer && Question.time > 0">
+							<audio loop autoplay>
+								<source src="tick.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+						<div ng-if="Question.time == 0">
+							<audio autoplay>
+								<source src="alarm.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
