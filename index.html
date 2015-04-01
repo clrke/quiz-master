@@ -13,19 +13,17 @@
 			<div class="panel callout">
 				<h1>
 					OWNAGE Quiz Contest
-					<small>
-						<div class="button small"
-							ng-repeat="(difficulty, q) in Question.values"
-							ng-click="Question.difficulty == difficulty?
-							null : Question.setDifficulty(difficulty)"
-							ng-class="{
-								primary: Question.difficulty == difficulty,
-								secondary: Question.difficulty != difficulty
-							}">
-							{{ difficulty }}
-						</div>
-					</small>
 				</h1>
+				<div class="button"
+					ng-repeat="(difficulty, q) in Question.values"
+					ng-click="Question.difficulty == difficulty?
+					null : Question.setDifficulty(difficulty)"
+					ng-class="{
+						primary: Question.difficulty == difficulty,
+						secondary: Question.difficulty != difficulty
+					}">
+					{{ difficulty }}
+				</div>
 			</div>
 			<div class="panel white container">
 				<div class="row">
