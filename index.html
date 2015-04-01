@@ -8,10 +8,24 @@
 		<script type="text/javascript" src="angular.js"></script>
 		<script type="text/javascript" src="quiz.js"></script>
 	</head>
-	<body>
+	<body ng-controller="QuestionController as Question">
 		<div class="main row">
 			<div class="panel callout">
-				<h1> OWNAGE Quiz Contest </h1>
+				<h1>
+					OWNAGE Quiz Contest
+					<small>
+						<div class="button small"
+							ng-repeat="(difficulty, q) in Question.values"
+							ng-click="Question.difficulty == difficulty?
+							null : Question.setDifficulty(difficulty)"
+							ng-class="{
+								primary: Question.difficulty == difficulty,
+								secondary: Question.difficulty != difficulty
+							}">
+							{{ difficulty }}
+						</div>
+					</small>
+				</h1>
 			</div>
 			<div class="panel white container">
 				<div class="row">
@@ -19,36 +33,57 @@
 						<div class="banner">
 						</div>
 					</div>
-					<div class="column small-10"
-						ng-controller="QuestionController as Question">
+					<div class="column small-10">
 						<div class="pagination-centered big-font">
 							<ul class="pagination" role="menubar"
 									aria-label="Pagination">
+								<li class="arrow" ng-class="{
+									unavailable: Question.index <= 0
+									}">
+									<a href="#" ng-click="
+										Question.index > 0?
+										Question.setIndex(Question.index-1) :
+										null">
+										&laquo; Previous
+									</a>
+								</li>
 								<li class="arrow unavailable"
 									aria-disabled="true">
-									<a href="">&laquo; Previous</a>
 								</li>
-								<li class="current"><a href="">1</a></li>
-								<li><a href="">2</a></li>
-								<li><a href="">3</a></li>
-								<li><a href="">4</a></li>
-								<li><a href="">5</a></li>
-								<li><a href="">6</a></li>
-								<li><a href="">7</a></li>
-								<li><a href="">8</a></li>
-								<li><a href="">9</a></li>
-								<li><a href="">10</a></li>
-								<li class="arrow">
-									<a href="">Next &raquo;</a>
+								<li ng-repeat="index in Question.values
+									[Question.difficulty] track by $index"
+									ng-class="{
+										current: Question.index == $index
+									}">
+									<a href="#"
+									ng-click="Question.index == $index?
+									null : Question.setIndex($index)">
+										{{ $index+1 }}
+									</a>
+								</li>
+								<li class="arrow" ng-class="{
+									unavailable: Question.index >=
+									Question.values[Question.difficulty]
+									.length - 1
+									}">
+									<a href="#" ng-click="
+										Question.index < Question.values
+										[Question.difficulty].length-1?
+										Question.setIndex(Question.index+1) :
+										null">
+										Next &raquo;
+									</a>
 								</li>
 							</ul>
 						</div>
-						<h1 ng-repeat="line in Question.getValue() track by $index">
+						<h1 ng-repeat="line in Question.getValue()
+							track by $index">
 							{{ line }}
 						</h1>
 						<h1>
 							<div class="button round timer animated tada"
-								ng-hide="Question.iteration < Question.value.length"
+								ng-hide="Question.iteration <
+								Question.value.length"
 								ng-class="{
 									success: Question.time > 20,
 									warning: Question.time > 10

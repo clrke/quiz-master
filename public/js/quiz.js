@@ -9,10 +9,40 @@ angular.module('QuizApp', [])
 
 	(function getQuestionDescription () {
 		$http.get('description.json').success(function (data) {
-			Question.value = data.questions.easy[0].question;
+			Question.values = data.questions;
+			Question.difficulty = 'easy';
+			Question.index = 0;
+
+			Question.value = data.questions[Question.difficulty]
+				[Question.index].question;
 
 			Question.iteration = 0;
 
+			Question.reset = function () {
+				Question.value = data.questions[Question.difficulty]
+					[Question.index].question;
+
+				Question.iteration = 0;
+
+				$interval.cancel(Question.typer);
+				$interval.cancel(Question.timer);
+
+				Question.typer = null;
+				Question.timer = null;
+
+				Question.typer = $interval(Question.type, 100,
+					Question.value.length);
+
+				Question.time = 30;
+			}
+			Question.setDifficulty = function (difficulty) {
+				Question.difficulty = difficulty;
+				Question.reset();
+			}
+			Question.setIndex = function (index) {
+				Question.index = index;
+				Question.reset();
+			}
 			Question.type = function () {
 				Question.iteration++;
 			}
