@@ -37,6 +37,7 @@ angular.module('QuizApp', [])
 			}
 			Question.setDifficulty = function (difficulty) {
 				Question.difficulty = difficulty;
+				Question.index = 0;
 				Question.reset();
 			}
 			Question.setIndex = function (index) {
