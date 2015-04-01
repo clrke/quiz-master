@@ -24,3 +24,7 @@ body {
     height: 500px;
     background-image: url('banner.jpg');
 }
+
+.big-font > ul > li {
+    font-size: 1.5em !important;
+}
