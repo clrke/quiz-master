@@ -1,7 +1,7 @@
 {
 	"title": "OWNAGE Quiz Contest",
 	"questions": {
-		"easy": [
+		"1easy": [
 			{
 				"question":
 					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
@@ -83,7 +83,7 @@
 				}
 			}
 		],
-		"medium": [
+		"2medium": [
 			{
 				"question":
 					"Mejo mahirap",
@@ -101,7 +101,7 @@
 				}
 			}
 		],
-		"hard": [
+		"3hard": [
 			{
 				"question":
 					"Mahirap",

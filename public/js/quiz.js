@@ -10,7 +10,7 @@ angular.module('QuizApp', [])
 	(function getQuestionDescription () {
 		$http.get('description.json').success(function (data) {
 			Question.values = data.questions;
-			Question.difficulty = 'easy';
+			Question.difficulty = '1easy';
 			Question.index = 0;
 
 			Question.value = data.questions[Question.difficulty]
