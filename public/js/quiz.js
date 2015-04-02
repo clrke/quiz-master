@@ -18,9 +18,14 @@ angular.module('QuizApp', [])
 
 			Question.iteration = 0;
 
+			Question.showAnswer = false;
+
 			Question.reset = function () {
-				Question.value = data.questions[Question.difficulty]
-					[Question.index].question;
+				Question.value = Question.showAnswer ?
+					data.questions[Question.difficulty]
+						[Question.index].answer.answer :
+					data.questions[Question.difficulty]
+						[Question.index].question;
 
 				Question.iteration = 0;
 
@@ -38,10 +43,12 @@ angular.module('QuizApp', [])
 			Question.setDifficulty = function (difficulty) {
 				Question.difficulty = difficulty;
 				Question.index = 0;
+				Question.showAnswer = false;
 				Question.reset();
 			}
 			Question.setIndex = function (index) {
 				Question.index = index;
+				Question.showAnswer = false;
 				Question.reset();
 			}
 			Question.type = function () {

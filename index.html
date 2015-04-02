@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="column small-10">
-						<div class="pagination-centered big-font">
+						<div class="pagination-centered">
 							<ul class="pagination" role="menubar"
 									aria-label="Pagination">
 								<li class="arrow" ng-class="{
@@ -72,6 +72,19 @@
 										Next &raquo;
 									</a>
 								</li>
+								<li>
+									<div class="button warning"
+										ng-class="{
+											warning: ! Question.showAnswer,
+											primary: Question.showAnswer
+										}"
+										ng-click="Question.showAnswer =
+											! Question.showAnswer;
+											Question.reset();">
+										{{Question.showAnswer ?
+										'Show Question':'Show Answer'}}
+									</div>
+								</li>
 							</ul>
 						</div>
 						<h1 ng-repeat="line in Question.getValue()
@@ -81,7 +94,7 @@
 						<h1>
 							<div class="button round timer animated tada"
 								ng-hide="Question.iteration <
-								Question.value.length"
+								Question.value.length || Question.showAnswer"
 								ng-class="{
 									success: Question.time > 20,
 									warning: Question.time > 10
