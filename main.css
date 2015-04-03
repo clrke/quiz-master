@@ -29,3 +29,15 @@ body {
 .big-font > ul > li {
     font-size: 1.5em !important;
 }
+
+.button.left-round {
+    border-radius: 100px 0 0px 100px;
+}
+
+.button.right-round {
+    border-radius: 0px 100px 100px 0px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
