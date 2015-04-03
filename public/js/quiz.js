@@ -80,4 +80,15 @@ angular.module('QuizApp', [])
 			}
 		});
 	})();
+}])
+
+.controller('TitleController', ['$http', '$interval',
+		function($http, $interval){
+	Title = this;
+
+	(function getQuestionDescription () {
+		$http.get('description.json').success(function (data) {
+			Title.value = data.title;
+		});
+	})();
 }]);

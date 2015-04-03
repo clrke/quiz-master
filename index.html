@@ -1,7 +1,7 @@
 <!DOCTYPE>
-<html ng-app="QuizApp">
+<html ng-app="QuizApp" ng-controller="TitleController as Title">
 	<head>
-		<title>Quiz Master</title>
+		<title>{{ Title.value }}</title>
 		<link rel="stylesheet" type="text/css" href="foundation.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="animate.css">
@@ -12,7 +12,7 @@
 		<div class="main row">
 			<div class="panel callout">
 				<h1>
-					OWNAGE Quiz Contest
+					{{ Title.value }}
 				</h1>
 				<div class="button"
 					ng-repeat="(difficulty, q) in Question.values"
