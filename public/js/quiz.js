@@ -23,7 +23,7 @@ angular.module('QuizApp', [])
 			Question.reset = function () {
 				Question.value = Question.showAnswer ?
 					data.questions[Question.difficulty]
-						[Question.index].answer.answer :
+						[Question.index].answer.value :
 					data.questions[Question.difficulty]
 						[Question.index].question;
 
