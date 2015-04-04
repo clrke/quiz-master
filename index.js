@@ -34,7 +34,7 @@ http.createServer(function (request, response) {
 			setResponse('text/javascript', 'angular.js');
 			break;
 		case '/quiz.js':
-			setResponse('text/javascript', 'public/js/quiz.js');
+			setResponse('text/javascript', 'js/quiz.js');
 			break;
 		case '/description.json':
 			setResponse('text/json', 'description.json');
