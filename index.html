@@ -23,7 +23,7 @@
 					}" id="{{'difficulty'+$index}}">
 				</div>
 			</div>
-			<div class="panel radius white container">
+			<div class="panel radius white container main-content">
 				<div class="row">
 					<div class="column small-12">
 						<div class="pagination-centered">
@@ -91,30 +91,28 @@
 							<img ng-src="{{ Question.values[Question.difficulty]
 								[Question.index].answer.file }}">
 						</div>
-						<h1>
-							<div class="button round timer animated tada"
-								ng-hide="Question.iteration <
-								Question.value.length || Question.showAnswer"
-								ng-class="{
-									success: Question.time > 20,
-									warning: Question.time > 10
-										&& Question.time <= 20,
-									alert: Question.time <= 10,
-									tada: ( ! Question.timer &&
-										Question.time == 30) ||
-										(Question.time <= 10
-										&& Question.time > 0),
-									infinite: Question.time < 30
-										&& Question.time > 0,
-									pulse: Question.timer &&
-										(Question.time <= 30
-										&& Question.time > 10),
-									rubberband: Question.time == 0
-									}"
-								ng-click="Question.startTimer()">
-									{{ Question.getFormattedTime() }}
-							</div>
-						</h1>
+						<div class="button round timer animated tada"
+							ng-hide="Question.iteration <
+							Question.value.length || Question.showAnswer"
+							ng-class="{
+								success: Question.time > 20,
+								warning: Question.time > 10
+									&& Question.time <= 20,
+								alert: Question.time <= 10,
+								tada: ( ! Question.timer &&
+									Question.time == 30) ||
+									(Question.time <= 10
+									&& Question.time > 0),
+								infinite: Question.time < 30
+									&& Question.time > 0,
+								pulse: Question.timer &&
+									(Question.time <= 30
+									&& Question.time > 10),
+								rubberband: Question.time == 0
+								}"
+							ng-click="Question.startTimer()">
+								{{ Question.getFormattedTime() }}
+						</div>
 						<div ng-if="Question.timer && Question.time > 0">
 							<audio loop autoplay>
 								<source src="tick.mp3" type="audio/mpeg">

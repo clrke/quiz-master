@@ -48,6 +48,9 @@ http.createServer(function (request, response) {
 		case '/banner.jpg':
 			setResponse('', 'img/banner.jpg');
 			break;
+		case '/background.jpg':
+			setResponse('', 'img/background.jpg');
+			break;
 		default:
 			try {
 				setResponse('', 'public'+route.path);

@@ -82,3 +82,8 @@ body {
 .no-margin-bottom {
     margin-bottom: 0px;
 }
+
+.main-content {
+    background-image: url('background.jpg');
+    height: 550px;
+}
