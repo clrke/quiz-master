@@ -112,6 +112,16 @@ body {
     background-image: url('display-type/2-primary.jpg');
 }
 
+#reference-button {
+    width: 180px;
+    height: 60px;
+    background-image: url('reference-button.jpg');
+}
+
+#reference-button:hover {
+    background-image: url('reference-button-hover.jpg');
+}
+
 .big-font > ul > li {
     font-size: 1.5em !important;
 }
