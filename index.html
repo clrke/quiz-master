@@ -116,19 +116,19 @@
 						<div class="button round timer animated tada"
 							ng-hide="Question.show != 'question' || Question.fadeOut"
 							ng-class="{
-								success: Question.time > 20,
-								warning: Question.time > 10
-									&& Question.time <= 20,
-								alert: Question.time <= 10,
+								success: Question.time > Question.timerTwoThird(),
+								warning: Question.time > Question.timerOneThird()
+									&& Question.time <= Question.timerTwoThird(),
+								alert: Question.time <= Question.timerOneThird(),
 								tada: ( ! Question.timer &&
-									Question.time == 30) ||
-									(Question.time <= 10
+									Question.time == Question.maxTime) ||
+									(Question.time <= Question.timerOneThird()
 									&& Question.time > 0),
-								infinite: Question.time < 30
+								infinite: Question.time < Question.maxTime
 									&& Question.time > 0,
 								pulse: Question.timer &&
-									(Question.time <= 30
-									&& Question.time > 10),
+									(Question.time <= Question.maxTime
+									&& Question.time > Question.timerOneThird()),
 								rubberband: Question.time == 0
 								}"
 							ng-click="Question.startTimer()">

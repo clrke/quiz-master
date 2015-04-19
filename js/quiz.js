@@ -50,13 +50,23 @@ angular.module('QuizApp', [])
 						break;
 				}
 				Question.fadeOut = false;
+
+				Question.timer = null;
+				Question.time = data.questions[Question.difficulty]
+					[Question.index].question.timer || 30;
+				Question.maxTime = Question.time;
 			};
+
+			Question.timerOneThird = function () {
+				return Question.maxTime/3;
+			}
+
+			Question.timerTwoThird = function () {
+				return Question.maxTime*2/3;
+			}
 
 			Question.reset = function () {
 				$interval.cancel(Question.timer);
-
-				Question.timer = null;
-				Question.time = 30;
 
 				Question.fadeOut = true;
 				$timeout(Question.setQuestion, 1000);
@@ -74,13 +84,11 @@ angular.module('QuizApp', [])
 				Question.reset();
 			}
 
-			Question.time = 30;
 			Question.timeMinus = function () {
 				Question.time--;
 			}
 			Question.startTimer = function () {
 				if( ! Question.timer) {
-					Question.time = 30;
 					Question.timer = $interval(Question.timeMinus,
 						1000, Question.time);
 				}
