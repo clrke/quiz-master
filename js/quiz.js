@@ -21,34 +21,27 @@ angular.module('QuizApp', [])
 			Question.show = 'info';
 
 			Question.setQuestion = function () {
+				Question.link = null;
+
 				switch(Question.show) {
 					case 'question':
-						Question.value = data.questions[Question.difficulty]
-							[Question.index].question.value;
+						var display = data.questions[Question.difficulty]
+							[Question.index].question
 						break;
 					case 'info':
-						Question.value = data.questions[Question.difficulty]
-							[Question.index].info.value;
+						var display = data.questions[Question.difficulty]
+							[Question.index].info
 						break;
 					case 'answer':
-						Question.value = data.questions[Question.difficulty]
-							[Question.index].answer.value;
+						var display = data.questions[Question.difficulty]
+							[Question.index].answer
 						break;
 				}
-				switch(Question.show) {
-					case 'question':
-						Question.file = data.questions[Question.difficulty]
-							[Question.index].question.file;
-						break;
-					case 'info':
-						Question.file = data.questions[Question.difficulty]
-							[Question.index].info.file;
-						break;
-					case 'answer':
-						Question.file = data.questions[Question.difficulty]
-							[Question.index].answer.file;
-						break;
-				}
+
+				Question.value = display.value;
+				Question.file = display.file;
+				Question.link = display.link;
+
 				Question.fadeOut = false;
 
 				Question.timer = null;

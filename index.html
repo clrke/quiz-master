@@ -113,6 +113,16 @@
 							}">
 							<img ng-src="{{ Question.file }}">
 						</div>
+						<div ng-if="Question.link" class="animated"
+							ng-class="{
+								fadeIn: ! Question.fadeOut,
+								fadeOut: Question.fadeOut
+							}">
+							<a href="{{ Question.link }}" class="button"
+								target="_blank">
+								Reference
+							</a>
+						</div>
 						<div class="button round timer animated tada"
 							ng-hide="Question.show != 'question' || Question.fadeOut"
 							ng-class="{
