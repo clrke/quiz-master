@@ -6,7 +6,7 @@
 				"question":
 					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
 				"answer": {
-					"answer": "Buriza do Kyanon",
+					"value": "Buriza do Kyanon",
 					"type": "img",
 					"file": "easy/01.jpg"
 				}
