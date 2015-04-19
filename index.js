@@ -50,7 +50,7 @@ http.createServer(function (request, response) {
 			break;
 		default:
 			try {
-				setResponse('image/webp', 'public'+route.path)
+				setResponse('', 'public'+route.path);
 			} catch(error) {
 				response.writeHead(404, {'Content-Type': 'text/text'});
 				response.end('404 page not found');

@@ -94,8 +94,11 @@
 							track by $index">
 							{{ line }}
 						</h1>
-						<img ng-src="{{ Question.values[Question.difficulty]
-							[Question.index].answer.file }}">
+						<div ng-if="Question.values[Question.difficulty]
+							[Question.index].answer.file">
+							<img ng-src="{{ Question.values[Question.difficulty]
+								[Question.index].answer.file }}">
+						</div>
 						<h1>
 							<div class="button round timer animated tada"
 								ng-hide="Question.iteration <
