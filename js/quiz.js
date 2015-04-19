@@ -49,6 +49,7 @@ angular.module('QuizApp', [])
 							[Question.index].answer.file;
 						break;
 				}
+				Question.fadeOut = false;
 			};
 
 			Question.reset = function () {
@@ -57,10 +58,8 @@ angular.module('QuizApp', [])
 				Question.timer = null;
 				Question.time = 30;
 
-				Question.value = null;
-				Question.file = null;
-
-				$timeout(Question.setQuestion, 1);
+				Question.fadeOut = true;
+				$timeout(Question.setQuestion, 1000);
 			}
 
 			Question.setDifficulty = function (difficulty) {
