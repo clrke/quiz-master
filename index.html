@@ -14,7 +14,7 @@
 			<div class="panel radius banner">
 				<div class="button difficulty no-margin-bottom"
 					ng-repeat="(difficulty, q) in Question.values"
-					ng-click="Question.difficulty == difficulty?
+					ng-click="Question.click(); Question.difficulty == difficulty?
 					null : Question.setDifficulty(difficulty)"
 					ng-class="{
 						primary: Question.difficulty == difficulty,
@@ -33,7 +33,7 @@
 								<li class="arrow" ng-class="{
 									unavailable: Question.index <= 0
 									}">
-									<a href="#" ng-click="
+									<a href="#" ng-click="Question.click();
 										Question.index > 0?
 										Question.setIndex(Question.index-1) :
 										null">
@@ -49,7 +49,7 @@
 										current: Question.index == $index
 									}">
 									<a href="#"
-									ng-click="Question.index == $index?
+									ng-click="Question.click(); Question.index == $index?
 									null : Question.setIndex($index)">
 										{{ $index+1 }}
 									</a>
@@ -59,7 +59,7 @@
 									Question.values[Question.difficulty]
 									.length - 1
 									}">
-									<a href="#" ng-click="
+									<a href="#" ng-click="Question.click();
 										Question.index < Question.values
 										[Question.difficulty].length-1?
 										Question.setIndex(Question.index+1) :
@@ -69,7 +69,7 @@
 								</li>
 								<li>
 									<div class="button left-round display-type"
-										ng-click="Question.show ='info';
+										ng-click="Question.click(); Question.show ='info';
 											Question.reset()"
 										ng-class="{
 											primary: Question.show == 'info',
@@ -78,7 +78,7 @@
 										&nbsp;
 									</div>
 									<div class="button display-type"
-										ng-click="Question.show ='question';
+										ng-click="Question.click(); Question.show ='question';
 											Question.reset()"
 										ng-class="{
 											primary: Question.show == 'question',
@@ -87,7 +87,7 @@
 										&nbsp;
 									</div>
 									<div class="button right-round display-type"
-										ng-click="Question.show ='answer';
+										ng-click="Question.click(); Question.show ='answer';
 											Question.reset()"
 										ng-class="{
 											primary: Question.show == 'answer',
@@ -142,7 +142,7 @@
 									&& Question.time > Question.timerOneThird()),
 								rubberband: Question.time == 0
 								}"
-							ng-click="Question.startTimer()">
+							ng-click="Question.click(); Question.startTimer()">
 								{{ Question.getFormattedTime() }}
 						</div>
 						<div ng-if="Question.timer && Question.time > 0">

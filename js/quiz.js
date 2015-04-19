@@ -97,6 +97,11 @@ angular.module('QuizApp', [])
 		Question.getFormattedTime = function () {
 			return (Question.time < 10? '0':'')+Question.time;
 		}
+
+		Question.click = function () {
+			var audio = new Audio('snare.mp3');
+			audio.play();
+		}
 	})();
 }])
 
