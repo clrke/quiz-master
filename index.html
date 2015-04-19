@@ -99,15 +99,14 @@
 							</ul>
 						</div>
 						<h1 ng-repeat="line in Question.getValue()
-							track by $index">
+							track by $index" class="animated fadeIn">
 							{{ line }}
 						</h1>
-						<div ng-if="Question.file">
+						<div ng-if="Question.file" class="animated fadeIn">
 							<img ng-src="{{ Question.file }}">
 						</div>
 						<div class="button round timer animated tada"
-							ng-hide="Question.iteration <
-							Question.value.length || Question.show != 'question'"
+							ng-hide="Question.show != 'question'"
 							ng-class="{
 								success: Question.time > 20,
 								warning: Question.time > 10

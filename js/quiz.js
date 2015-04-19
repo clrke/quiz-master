@@ -3,8 +3,8 @@
 */
 angular.module('QuizApp', [])
 
-.controller('QuestionController', ['$http', '$interval',
-		function($http, $interval){
+.controller('QuestionController', ['$http', '$interval', '$timeout',
+		function($http, $interval, $timeout){
 	Question = this;
 
 	(function getQuestionDescription () {
@@ -20,7 +20,7 @@ angular.module('QuizApp', [])
 
 			Question.show = 'info';
 
-			Question.reset = function () {
+			Question.setQuestion = function () {
 				switch(Question.show) {
 					case 'question':
 						Question.value = data.questions[Question.difficulty]
@@ -49,20 +49,20 @@ angular.module('QuizApp', [])
 							[Question.index].answer.file;
 						break;
 				}
+			};
 
-				Question.iteration = 0;
-
-				$interval.cancel(Question.typer);
+			Question.reset = function () {
 				$interval.cancel(Question.timer);
 
-				Question.typer = null;
 				Question.timer = null;
-
-				Question.typer = $interval(Question.type, 100,
-					Question.value.length);
-
 				Question.time = 30;
+
+				Question.value = null;
+				Question.file = null;
+
+				$timeout(Question.setQuestion, 1);
 			}
+
 			Question.setDifficulty = function (difficulty) {
 				Question.difficulty = difficulty;
 				Question.index = 0;
@@ -74,11 +74,6 @@ angular.module('QuizApp', [])
 				Question.show = 'info';
 				Question.reset();
 			}
-			Question.type = function () {
-				Question.iteration++;
-			}
-			Question.typer = $interval(Question.type, 100,
-				Question.value.length);
 
 			Question.time = 30;
 			Question.timeMinus = function () {
@@ -93,9 +88,11 @@ angular.module('QuizApp', [])
 			}
 
 			Question.getValue = function () {
-				value = Question.value.substring(0, Question.iteration);
-				return value.split('\n');
-
+				if(Question.value) {
+					return Question.value.split('\n');
+				} else {
+					return [];
+				}
 			}
 
 			Question.getFormattedTime = function () {
