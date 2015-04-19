@@ -70,6 +70,48 @@ body {
     background-image: url('difficulty/2-primary.jpg');
 }
 
+.display-type {
+    width: 120px;
+    height: 60px;
+    display: inline-block;
+}
+
+#display-type0 {
+    background-image: url('display-type/0.jpg');
+}
+
+#display-type0:hover {
+    background-image: url('display-type/0-hover.jpg');
+}
+
+#display-type0.primary {
+    background-image: url('display-type/0-primary.jpg');
+}
+
+#display-type1 {
+    background-image: url('display-type/1.jpg');
+}
+
+#display-type1:hover {
+    background-image: url('display-type/1-hover.jpg');
+}
+
+#display-type1.primary {
+    background-image: url('display-type/1-primary.jpg');
+}
+
+#display-type2 {
+    background-image: url('display-type/2.jpg');
+}
+
+#display-type2:hover {
+    background-image: url('display-type/2-hover.jpg');
+}
+
+#display-type2.primary {
+    background-image: url('display-type/2-primary.jpg');
+}
+
 .big-font > ul > li {
     font-size: 1.5em !important;
 }

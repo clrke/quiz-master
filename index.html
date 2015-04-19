@@ -67,18 +67,34 @@
 									</a>
 								</li>
 								<li>
-									<div class="button round warning
-										no-margin-bottom"
+									<div class="button left-round display-type"
+										ng-click="Question.show ='info';
+											Question.reset()"
 										ng-class="{
-											warning: ! Question.showAnswer,
-											primary: Question.showAnswer
-										}"
-										ng-click="Question.showAnswer =
-											! Question.showAnswer;
-											Question.reset();">
-										{{Question.showAnswer ?
-										'Show Question':'Show Answer'}}
+											primary: Question.show == 'info',
+											secondary: Question.show != 'info'
+										}" id="display-type0">
+										&nbsp;
 									</div>
+									<div class="button display-type"
+										ng-click="Question.show ='question';
+											Question.reset()"
+										ng-class="{
+											primary: Question.show == 'question',
+											secondary: Question.show != 'question'
+										}" id="display-type1">
+										&nbsp;
+									</div>
+									<div class="button right-round display-type"
+										ng-click="Question.show ='answer';
+											Question.reset()"
+										ng-class="{
+											primary: Question.show == 'answer',
+											secondary: Question.show != 'answer'
+										}" id="display-type2">
+										&nbsp;
+									</div>
+
 								</li>
 							</ul>
 						</div>
@@ -86,14 +102,12 @@
 							track by $index">
 							{{ line }}
 						</h1>
-						<div ng-if="Question.values[Question.difficulty]
-							[Question.index].answer.file">
-							<img ng-src="{{ Question.values[Question.difficulty]
-								[Question.index].answer.file }}">
+						<div ng-if="Question.file">
+							<img ng-src="{{ Question.file }}">
 						</div>
 						<div class="button round timer animated tada"
 							ng-hide="Question.iteration <
-							Question.value.length || Question.showAnswer"
+							Question.value.length || Question.show != 'question'"
 							ng-class="{
 								success: Question.time > 20,
 								warning: Question.time > 10

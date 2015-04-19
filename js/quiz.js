@@ -14,18 +14,41 @@ angular.module('QuizApp', [])
 			Question.index = 0;
 
 			Question.value = data.questions[Question.difficulty]
-				[Question.index].question;
+				[Question.index].info.value;
 
 			Question.iteration = 0;
 
-			Question.showAnswer = false;
+			Question.show = 'info';
 
 			Question.reset = function () {
-				Question.value = Question.showAnswer ?
-					data.questions[Question.difficulty]
-						[Question.index].answer.value :
-					data.questions[Question.difficulty]
-						[Question.index].question;
+				switch(Question.show) {
+					case 'question':
+						Question.value = data.questions[Question.difficulty]
+							[Question.index].question.value;
+						break;
+					case 'info':
+						Question.value = data.questions[Question.difficulty]
+							[Question.index].info.value;
+						break;
+					case 'answer':
+						Question.value = data.questions[Question.difficulty]
+							[Question.index].answer.value;
+						break;
+				}
+				switch(Question.show) {
+					case 'question':
+						Question.file = data.questions[Question.difficulty]
+							[Question.index].question.file;
+						break;
+					case 'info':
+						Question.file = data.questions[Question.difficulty]
+							[Question.index].info.file;
+						break;
+					case 'answer':
+						Question.file = data.questions[Question.difficulty]
+							[Question.index].answer.file;
+						break;
+				}
 
 				Question.iteration = 0;
 
@@ -43,12 +66,12 @@ angular.module('QuizApp', [])
 			Question.setDifficulty = function (difficulty) {
 				Question.difficulty = difficulty;
 				Question.index = 0;
-				Question.showAnswer = false;
+				Question.show = 'info';
 				Question.reset();
 			}
 			Question.setIndex = function (index) {
 				Question.index = index;
-				Question.showAnswer = false;
+				Question.show = 'info';
 				Question.reset();
 			}
 			Question.type = function () {

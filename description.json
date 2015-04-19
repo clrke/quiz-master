@@ -3,81 +3,125 @@
 	"questions": {
 		"1easy": [
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Easy #01\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img",
-					"file": "easy/01.jpg"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Easy #02\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Easy #03\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Easy #04\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Easy #05\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Easy #06\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Easy #07\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Easy #08\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Easy #09\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Easy #10\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
@@ -86,98 +130,252 @@
 		],
 		"2medium": [
 			{
-				"question":
-					"Mejo mahirap",
+				"info": {
+					"value": "Medium #01\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "Mejo mahirap",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
-					"value": "Buriza do Kyanon",
+					"value": "Edi wow",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #02\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan nya?",
+				"info": {
+					"value": "Medium #03\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
-					"value": "Secret din",
+					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #04\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
+					"type": "img"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #05\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
+				"answer": {
+					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #06\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
+					"type": "img"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #07\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
+				"answer": {
+					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #08\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
+					"type": "img"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #09\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
+				"answer": {
+					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Medium #10\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
 					"type": "img"
 				}
 			}
 		],
 		"3hard": [
 			{
-				"question":
-					"Mahirap",
+				"info": {
+					"value": "Hard #01\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "Mahirap",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
-					"value": "Buriza do Kyanon",
-					"type": "img"
+					"value": "Edi wow",
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
-				"answer": {
-					"value": "Secret",
-					"type": "img"
-				}
-			},
-			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
-				"answer": {
-					"value": "Buriza do Kyanon",
-					"type": "img"
-				}
-			},
-			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Hard #02\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Hard #03\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Hard #04\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Hard #05\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
-					"type": "img"
+					"file": "easy/answer/01.jpg"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Hard #06\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong buong pangalan ng Buriza?\na. Shadow blade\nb. Lothar's Edge\nc. Buriza Mae Show\nd. Buriza do Kyanon",
+				"info": {
+					"value": "Hard #07\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
 				"answer": {
 					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Hard #08\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
+				"answer": {
+					"value": "Secret",
 					"type": "img"
 				}
 			},
 			{
-				"question":
-					"Anong pangalan mo?",
+				"info": {
+					"value": "Hard #09\nType: Multiple Choice"
+				},
+				"question": {
+					"value": "How many total neutral creep camps are there?",
+					"file": "easy/question/01.jpg"
+				},
+				"answer": {
+					"value": "Buriza do Kyanon",
+					"file": "easy/answer/01.jpg"
+				}
+			},
+			{
+				"info": {
+					"value": "Hard #10\nType: Identification"
+				},
+				"question": {
+					"value": "Anong pangalan mo?"
+				},
 				"answer": {
 					"value": "Secret",
 					"type": "img"
