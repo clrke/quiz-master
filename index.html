@@ -10,11 +10,8 @@
 	</head>
 	<body ng-controller="QuestionController as Question">
 		<div class="main row">
-			<div class="panel radius callout">
-				<h1>
-					{{ Title.value }}
-				</h1>
-				<div class="button no-margin-bottom"
+			<div class="panel radius banner">
+				<div class="button difficulty no-margin-bottom"
 					ng-repeat="(difficulty, q) in Question.values"
 					ng-click="Question.difficulty == difficulty?
 					null : Question.setDifficulty(difficulty)"
@@ -23,17 +20,12 @@
 						secondary: Question.difficulty != difficulty,
 						'left-round': $first,
 						'right-round': $last
-					}">
-					{{ difficulty.substring(1, difficulty.length) }}
+					}" id="{{'difficulty'+$index}}">
 				</div>
 			</div>
 			<div class="panel radius white container">
 				<div class="row">
-					<div class="column small-2">
-						<div class="banner">
-						</div>
-					</div>
-					<div class="column small-10">
+					<div class="column small-12">
 						<div class="pagination-centered">
 							<ul class="pagination" role="menubar"
 									aria-label="Pagination">

@@ -22,8 +22,49 @@ body {
 }
 
 .banner {
-    height: 460px;
+    height: 160px;
     background-image: url('banner.jpg');
+}
+
+.difficulty {
+    width: 120px;
+    height: 60px;
+    margin-top: 60px;
+}
+#difficulty0 {
+    background-image: url('difficulty/0.jpg');
+}
+
+#difficulty0:hover {
+    background-image: url('difficulty/0-hover.jpg');
+}
+
+#difficulty0.primary {
+    background-image: url('difficulty/0-primary.jpg');
+}
+
+#difficulty1 {
+    background-image: url('difficulty/1.jpg');
+}
+
+#difficulty1:hover {
+    background-image: url('difficulty/1-hover.jpg');
+}
+
+#difficulty1.primary {
+    background-image: url('difficulty/1-primary.jpg');
+}
+
+#difficulty2 {
+    background-image: url('difficulty/2.jpg');
+}
+
+#difficulty2:hover {
+    background-image: url('difficulty/2-hover.jpg');
+}
+
+#difficulty2.primary {
+    background-image: url('difficulty/2-primary.jpg');
 }
 
 .big-font > ul > li {
