@@ -1,4 +1,5 @@
 var data = {
+	"secondsBeforeStart": 10,
 	"title": "OWNAGE Quiz Contest",
 	"questions": {
 		"1easy": [

@@ -24,6 +24,28 @@ body {
     background-color: black;
 }
 
+.button.bottom {
+    font-family: Bookman Old Style;
+    font-size: 6em;
+    color: white;
+    position: absolute !important;
+    bottom: 40;
+    background: none !important;
+}
+
+video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+}
+
+div.blank {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    cursor: pointer;
+}
 .banner {
     height: 160px;
     background-image: url('img/banner.jpg');

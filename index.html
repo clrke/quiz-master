@@ -1,7 +1,7 @@
 <!DOCTYPE>
-<html ng-app="QuizApp" ng-controller="TitleController as Title">
+<html ng-app="QuizApp" ng-controller="MainController as Main">
 	<head>
-		<title>{{ Title.value }}</title>
+		<title>{{ Main.value }}</title>
 		<link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="animate.css">
@@ -9,8 +9,22 @@
 		<script type="text/javascript" src="angular.js"></script>
 		<script type="text/javascript" src="js/quiz.js"></script>
 	</head>
-	<body ng-controller="QuestionController as Question">
-		<div class="main row">
+	<body ng-click="Main.route == ''? (Main.setRoute('title')) : null">
+		<div class="main row" ng-if="Main.route == 'title'"
+			ng-class="{'animated fadeOut': Main.fadeOut}">
+			<video autoplay loop id="bgvid">
+				<source src="public/bg-movie.webm" type="video/webm">
+				<source src="public/bg-movie.mp4" type="video/mp4">
+			</video>
+			<div class="button bottom animated fadeInLeft"
+				ng-click="Main.transition('game')"
+				ng-show="Main.showStartGame">
+				Start game
+			</div>
+		</div>
+		<div class="main row animated fadeIn"
+			ng-controller="QuestionController as Question"
+			ng-if="Main.route == 'game'">
 			<div class="panel radius banner">
 				<div class="button difficulty no-margin-bottom"
 					ng-repeat="(difficulty, q) in Question.values"

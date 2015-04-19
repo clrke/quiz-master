@@ -63,15 +63,14 @@ angular.module('QuizApp', [])
 			Question.fadeOut = true;
 			$timeout(Question.setQuestion, 1000);
 
-			if (Question.bgm)
+			if (Question.bgm) {
 				Question.bgm.pause();
 
-			if(Question.show == 'info')
-				Question.bgm = new Audio('music/info.mp3');
-			else if(Question.show == 'question')
-				Question.bgm = new Audio('music/question.mp3');
-			else
-				Question.bgm = null;
+				if(Question.bgm.battle) {
+					Question.bgm = new Audio('music/info.mp3');
+					Question.bgm.battle = false;
+				}
+			}
 
 			if(Question.bgm)
 				Question.bgm.play();
@@ -99,7 +98,15 @@ angular.module('QuizApp', [])
 			if( ! Question.timer) {
 				Question.timer = $interval(Question.timeMinus,
 					1000, Question.time);
+
+				if (Question.bgm)
+					Question.bgm.pause();
+
+				Question.bgm = new Audio('music/question.mp3');
+				Question.bgm.battle = true;
+				Question.bgm.play();
 			}
+
 		}
 
 		Question.getValue = function () {
@@ -124,11 +131,36 @@ angular.module('QuizApp', [])
 	})();
 }])
 
-.controller('TitleController', ['$http', '$interval',
-		function($http, $interval){
-	Title = this;
+.controller('MainController', ['$http', '$timeout',
+		function($http, $timeout){
+	Main = this;
 
-	(function getQuestionDescription () {
-		Title.value = data.title;
-	})();
+	Main.value = data.title;
+	Main.route = '';
+
+	Main.showStartGame = false;
+
+	Main.fadeOut = false;
+
+	$timeout(function () {
+		Main.showStartGame = true;
+	}, data.secondsBeforeStart * 1000);
+
+	Main.transition = function (route) {
+		$timeout(function () {
+			Main.setRoute(route);
+			Main.fadeOut = false;
+		}, 1000);
+		Main.fadeOut = true;
+	}
+
+	Main.bgm = new Audio('music/title.mp3');
+	Main.setRoute = function(route) {
+		if(route == 'title') {
+			Main.bgm.play();
+		} else {
+			Main.bgm.pause();
+		}
+		Main.route = route;
+	}
 }]);
