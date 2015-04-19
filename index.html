@@ -2,11 +2,12 @@
 <html ng-app="QuizApp" ng-controller="TitleController as Title">
 	<head>
 		<title>{{ Title.value }}</title>
-		<link rel="stylesheet" type="text/css" href="foundation.css">
+		<link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="stylesheet" type="text/css" href="animate.css">
 		<script type="text/javascript" src="angular.js"></script>
-		<script type="text/javascript" src="quiz.js"></script>
+		<script type="text/javascript" src="js/quiz.js"></script>
+		<script type="text/javascript" src="description.js"></script>
 	</head>
 	<body ng-controller="QuestionController as Question">
 		<div class="main row">
@@ -111,7 +112,7 @@
 								fadeIn: ! Question.fadeOut,
 								fadeOut: Question.fadeOut
 							}">
-							<img ng-src="{{ Question.file }}">
+							<img ng-src="{{ 'public/'+Question.file }}">
 						</div>
 						<div ng-if="Question.link" class="animated"
 							ng-class="{

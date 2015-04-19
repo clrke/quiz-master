@@ -26,7 +26,7 @@ body {
 
 .banner {
     height: 160px;
-    background-image: url('banner.jpg');
+    background-image: url('img/banner.jpg');
 }
 
 .difficulty {
@@ -35,39 +35,39 @@ body {
     margin-top: 60px;
 }
 #difficulty0 {
-    background-image: url('difficulty/0.jpg');
+    background-image: url('public/difficulty/0.jpg');
 }
 
 #difficulty0:hover {
-    background-image: url('difficulty/0-hover.jpg');
+    background-image: url('public/difficulty/0-hover.jpg');
 }
 
 #difficulty0.primary {
-    background-image: url('difficulty/0-primary.jpg');
+    background-image: url('public/difficulty/0-primary.jpg');
 }
 
 #difficulty1 {
-    background-image: url('difficulty/1.jpg');
+    background-image: url('public/difficulty/1.jpg');
 }
 
 #difficulty1:hover {
-    background-image: url('difficulty/1-hover.jpg');
+    background-image: url('public/difficulty/1-hover.jpg');
 }
 
 #difficulty1.primary {
-    background-image: url('difficulty/1-primary.jpg');
+    background-image: url('public/difficulty/1-primary.jpg');
 }
 
 #difficulty2 {
-    background-image: url('difficulty/2.jpg');
+    background-image: url('public/difficulty/2.jpg');
 }
 
 #difficulty2:hover {
-    background-image: url('difficulty/2-hover.jpg');
+    background-image: url('public/difficulty/2-hover.jpg');
 }
 
 #difficulty2.primary {
-    background-image: url('difficulty/2-primary.jpg');
+    background-image: url('public/difficulty/2-primary.jpg');
 }
 
 .display-type {
@@ -77,49 +77,49 @@ body {
 }
 
 #display-type0 {
-    background-image: url('display-type/0.jpg');
+    background-image: url('public/display-type/0.jpg');
 }
 
 #display-type0:hover {
-    background-image: url('display-type/0-hover.jpg');
+    background-image: url('public/display-type/0-hover.jpg');
 }
 
 #display-type0.primary {
-    background-image: url('display-type/0-primary.jpg');
+    background-image: url('public/display-type/0-primary.jpg');
 }
 
 #display-type1 {
-    background-image: url('display-type/1.jpg');
+    background-image: url('public/display-type/1.jpg');
 }
 
 #display-type1:hover {
-    background-image: url('display-type/1-hover.jpg');
+    background-image: url('public/display-type/1-hover.jpg');
 }
 
 #display-type1.primary {
-    background-image: url('display-type/1-primary.jpg');
+    background-image: url('public/display-type/1-primary.jpg');
 }
 
 #display-type2 {
-    background-image: url('display-type/2.jpg');
+    background-image: url('public/display-type/2.jpg');
 }
 
 #display-type2:hover {
-    background-image: url('display-type/2-hover.jpg');
+    background-image: url('public/display-type/2-hover.jpg');
 }
 
 #display-type2.primary {
-    background-image: url('display-type/2-primary.jpg');
+    background-image: url('public/display-type/2-primary.jpg');
 }
 
 #reference-button {
     width: 180px;
     height: 60px;
-    background-image: url('reference-button.jpg');
+    background-image: url('public/reference-button.jpg');
 }
 
 #reference-button:hover {
-    background-image: url('reference-button-hover.jpg');
+    background-image: url('public/reference-button-hover.jpg');
 }
 
 .big-font > ul > li {
@@ -139,6 +139,6 @@ body {
 }
 
 .main-content {
-    background-image: url('background.jpg');
+    background-image: url('img/background.jpg');
     height: 550px;
 }

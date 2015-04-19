@@ -1,4 +1,4 @@
-{
+var data = {
 	"title": "OWNAGE Quiz Contest",
 	"questions": {
 		"1easy": [
@@ -34,11 +34,11 @@
 					"value": "Easy #03\nType: Multiple Choice"
 				},
 				"question": {
-					"value": "If Roshan is slain, he respawns between how many minutes?\na. 7 – 10 minutes\nb. 8 – 11 minutes\nc.11 – 13 minutes\nd. 12 – 15 minutes",
+					"value": "If Roshan is slain, he respawns between how many minutes?\na. 7 - 10 minutes\nb. 8 - 11 minutes\nc.11 - 13 minutes\nd. 12 - 15 minutes",
 					"timer": 10
 				},
 				"answer": {
-					"value": "b. 8 – 11 minutes",
+					"value": "b. 8 - 11 minutes",
 					"file": "easy/answer/02.jpg"
 				}
 			},
