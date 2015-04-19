@@ -62,6 +62,19 @@ angular.module('QuizApp', [])
 
 			Question.fadeOut = true;
 			$timeout(Question.setQuestion, 1000);
+
+			if (Question.bgm)
+				Question.bgm.pause();
+
+			if(Question.show == 'info')
+				Question.bgm = new Audio('music/info.mp3');
+			else if(Question.show == 'question')
+				Question.bgm = new Audio('music/question.mp3');
+			else
+				Question.bgm = null;
+
+			if(Question.bgm)
+				Question.bgm.play();
 		}
 
 		Question.setDifficulty = function (difficulty) {
@@ -78,6 +91,9 @@ angular.module('QuizApp', [])
 
 		Question.timeMinus = function () {
 			Question.time--;
+
+			if(Question.time == 0)
+				Question.bgm.pause();
 		}
 		Question.startTimer = function () {
 			if( ! Question.timer) {
@@ -102,6 +118,9 @@ angular.module('QuizApp', [])
 			var audio = new Audio('snare.mp3');
 			audio.play();
 		}
+
+		Question.bgm = new Audio('music/info.mp3');
+		Question.bgm.play();
 	})();
 }])
 
